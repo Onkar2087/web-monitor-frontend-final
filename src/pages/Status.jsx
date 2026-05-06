@@ -189,7 +189,14 @@ function Status() {
                                         key={i}
                                         className="text-sm text-gray-600"
                                     >
-                                        {h.created_at}
+                                       {new Date(h.created_at + "Z").toLocaleString("en-IN", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true,
+})}
                                     </div>
                                 ))
                             ) : (
